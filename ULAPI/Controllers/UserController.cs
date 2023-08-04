@@ -32,7 +32,7 @@ namespace ULAPI.Controllers
 
         [Route("/UserController/updateUser")]
         [HttpGet]
-        public void updateUser(string Name, string Password, string newName, string newPassword, string newEmail)
+        public void updateUser(string Name, string Password, string newName = "", string newPassword = "", string newEmail = "")
         {
             UserModel userToAdd = new UserModel(Name, Password);
             UserModel userToUpdate = new UserModel(newName, newPassword, newEmail);
